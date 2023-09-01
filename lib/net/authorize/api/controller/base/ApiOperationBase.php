@@ -86,6 +86,12 @@ abstract class ApiOperationBase implements IApiOperation
         $this->serializer = $serializerBuilder->build();*/
     }
 
+    public function setHttpClient($httpClient)
+    {
+        $this->httpClient = $httpClient;
+        return $this;
+    }
+
     /**
      * Retrieves response
      * @return \net\authorize\api\contract\v1\AnetApiResponseType
